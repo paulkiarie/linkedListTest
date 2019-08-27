@@ -1,0 +1,54 @@
+// C# code to remove the specified 
+// node from the LinkedList 
+using System; 
+using System.Collections; 
+using System.Collections.Generic; 
+
+class GFG { 
+
+	// Driver code 
+	public static void Main() 
+	{ 
+		// Creating a LinkedList of Strings 
+		LinkedList<String> myList = new LinkedList<String>(); 
+
+		// Adding nodes in LinkedList 
+		myList.AddLast("E"); 
+		myList.AddLast("B"); 
+		myList.AddLast("E"); 
+		myList.AddLast("B"); 
+		myList.AddLast("A"); 
+		myList.AddLast("B");
+
+		// To get the count of nodes in LinkedList 
+		// before removing all the nodes 
+		Console.WriteLine("Total nodes in myList are : " + myList.Count); 
+
+		// Displaying the nodes in LinkedList 
+		foreach(string str in myList) 
+		{ 
+			Console.WriteLine(str); 
+		} 
+
+		//checking whether there is reduncy of the values
+		foreach(string str in myList) 
+		{ 
+		    string repeatingNode = myList.Exist(str)
+
+	     // Removing the repeating node from the LinkedList 
+
+		  myList.Remove("repeatingNode");
+		} 
+		
+
+		// To get the count of nodes in LinkedList 
+		// after removing all the nodes 
+		Console.WriteLine("Total nodes in myList are : " + myList.Count); 
+
+		// Displaying the nodes in LinkedList 
+		foreach(string str in myList) 
+		{ 
+			Console.WriteLine(str); 
+		} 
+	} 
+} 
